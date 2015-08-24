@@ -8,7 +8,7 @@
 	<item>
 	  <title>svnX Version 2.0b1</title>
 	  <pubDate>Mon, 24 August 2015 05:42:37 +0000</pubDate>
-	  <enclosure url="https://drive.google.com/uc?export=download&id=0BxPoqCZbKlM_SmMtY2ItQklha2s"
+	  <enclosure url="https://drive.google.com/uc?export=download&amp;id=0BxPoqCZbKlM_SmMtY2ItQklha2s"
 				 length="4169566" type="application/octet-stream"
 				 sparkle:version="2.0b1" sparkle:md5Sum="fac01225767863fbc76b16fbcfccc67d"/>
 	  <description><![CDATA[
@@ -47,7 +47,7 @@
 </style>
 <div style='background-color: #FDA; -webkit-border-radius: 20px; padding: 10px 20px;
 			font: 124% sans-serif; box-shadow: 0 2px 5px gray; margin: 10px 10px 30px;'>
-<h2>IMPORTANT:</h2> Google Code is going away, imminently.  SvnX is looking for a new home to host downloads, information & issue reporting.<p/>
+<h2>IMPORTANT:</h2> Google Code is going away, imminently.  SvnX is looking for a new home to host downloads, information &amp; issue reporting.<p/>
 In order to receive any future updates you need to run SvnX 2.x as it will redirect you to the svnX’s new home when it becomes available.<p/>
 <span style='font-size: 80%'>SvnX 1.x will not be able to see new updates.  SvnX 2.x can coexist with svnX 1.x on your Mac.</span>
 </div>
@@ -151,8 +151,8 @@ Known Issues: Log list views may require manual refreshing when initially opened
 <li>WC Create Patch command - selected files, current folder or entire working copy.  <new>NEW</new></li>
 <li>Apply Patch support: drop *.patch file on WC window.  <new>NEW</new></li>
 <li>Allow hiding &amp; showing of WC item-list columns via menu <Mnu>Working-Copy</Mnu> ▷ <Mnu>Columns</Mnu>.  <new>NEW</new></li>
-<li><Key>^D</Key> ⇨ compare any 2 text files &amp; <Key>^⌥D</Key> ⇨ compare files reversed.  <new>NEW</new></li>
-<li><Key>^1</Key> ⇨ Tree view, <Key>^2</Key> ⇨ Flat view &amp; <Key>^3</Key> ⇨ Smart view.</li>
+<li><Key>⌃D</Key> ⇨ compare any 2 text files &amp; <Key>⌃⌥D</Key> ⇨ compare files reversed.  <new>NEW</new></li>
+<li><Key>⌃1</Key> ⇨ Tree view, <Key>⌃2</Key> ⇨ Flat view &amp; <Key>⌃3</Key> ⇨ Smart view.</li>
 <li>Indicate tree conflicts in WC items list &amp; describe them in the tool-tip.</li>
 <li>After update, merge, revert or switch - open the WC sidebar if the output indicates there are conflicts.</li>
 <li>Added tree view mode support for <Key>⤎</Key> go to parent folder &amp; select previous current folder &amp; <Key>⤏</Key> go into selected folder.</li>

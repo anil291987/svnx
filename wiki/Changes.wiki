@@ -1,6 +1,157 @@
-#summary svnX changes.
-#labels Changes Featured
+#summary svnX 2.0 changes and download link.
+#labels Changes, Featured
 
+<wiki:comment>..............................  2.0b1  ..............................</wiki:comment>
+= 2.0b1 — <font color="#0B0">BETA</font>    <font size="3">2015–08–24    [https://drive.google.com/uc?export=download&id=0BxPoqCZbKlM_SmMtY2ItQklha2s Download] </font>=
+
+<font color="#B00">
+== IMPORTANT: ==
+  <b>Google Code is going away, imminently.  SvnX is looking for a new home to host downloads, information & issue reporting.<p/>
+  In order to receive any future updates you need to run SvnX 2.x as it will redirect you to the svnX’s new home when it becomes available.<p/>
+  SvnX 1.x will not be able to see new updates.  SvnX 2.x can coexist with svnX 1.x on your Mac.<p/>
+</b></font>
+
+*NOTE:* This is a major new version of svnX.  Please try it and provide feedback on any issues you find.<p/>
+Known Issues: Log list views may require manual refreshing when initially opened.  Help documentation is incomplete.<p/>
+
+*NOTE:* SvnX 2.0 supports OSX 10.5.8 thru 10.10+ and Subversion 1.6.x thru 1.9+.<p/>
+
+Download: [https://drive.google.com/uc?export=download&id=0BxPoqCZbKlM_SmMtY2ItQklha2s]
+
+
+==== General ====
+ * Compiled for Intel 32-bit, Intel 64-bit & PowerPC 32-bit processors.
+ * Localisation support.  <font color="#F70">*NEW*</font>
+ * Working-Copy & Repository menus.  <font color="#F70">*NEW*</font>
+ * HTML help book + entire Subversion book.  <font color="#F70">*NEW*</font>
+ * Added *Help ▷ Keyboard Shortcuts* & *Subversion Book*.
+ * Incremental log building.  <font color="#F70">*NEW*</font>
+ * Encrypts passwords.
+ * Check & report missing & incorrectly installed diff applications.
+ * Added support for committing 1,000s of files in a single commit.
+ * Added support for large (> 256 KB) commit messages.
+ * Users may modify the font used in any commit message edit field (right-click ▷ *Font ▷ Show Fonts*).<p/>  This is then saved & used in all commit message edit fields & as the default message font in log views.
+
+==== Bookmarks window  <font color="#F70">*NEW*</font> ====
+ * Combined Working Copies & Repositories list window.  `[`Replaces separate list windows.`]`.
+ * Collapsable, custom groups, custom icons, info, notes.<p/>  Press `tab` to reveal the edit fields, `⌘E` to toggle them, `⌘1`, `⌘2` or `⌘3` to reveal or switch between the 3 tabs.
+ * Info tab displays details gleamed from the working copy or repository.  <font color="#F70">*NEW*</font>
+ * Bookmark info may be refreshed manually or at user customisable intervals.
+ * Create Local Repository… command & sheet.  <font color="#F70">*NEW*</font><p/>  Includes option to automatically create trunk, branches & tags dirs.
+ * New menu command to purge the repository log cache for an individual repository.
+ * New custom (per WC/Repo) script-arg passed to open, openLink, and Review & Commit scripts.
+ * Allow *File ▷ Open* (or `⌘O`) to open the selected WC or Repo.
+ * Menu command *Edit ▷ Reveal Bookmark* to show the bookmark item for the current WC or Repo window.
+ * Drag bookmark or group to Finder (to export/make clipping) or to a text editor to insert<p/>  “Title⏎Path⏎UserName⏎`[`Password`]`⏎Description”.  “Password” requires option or shift key pressed.
+ * Drag bookmark or group clipping from Finder into Bookmarks to import bookmark or group.
+ * Drag text into WCs & Repos list to create new WC or Repo item.
+ * Drag folder into WCs & Repos list to create new WC or Repo item.
+ * File “~/Libraries/Application/Support/svnX/svnX Bookmarks” stores all WCs & Repos data.  <font color="#F70">*NEW*</font><p/>  Maintains automatic backups of last 10 versions.
+ * Bookmarks are automatically created for all working copies or repositories from svnX 1.x preferences the first time svnX 2 is launched.
+
+==== Preferences window ====
+ * Multi-pane preferences window.  <font color="#F70">*NEW*</font><p/>  General, Working Copies, Repositories & Log Filters panes.
+ * Fields are live filtered/formatted.  Empty fields revert to default values.
+ * Save & restore open WC & Repo windows across app launches with separate WC & Repo preference checkboxes.  <font color="#F70">*NEW*</font><p/>  Press `⌃+⌥+⌘` at launch to ignore.
+ * Default User Name preference.  Used by New WC & Repo commands & drags into WCs & Repos list.
+ * WC preference to enable/disable colourised modified dates.  <font color="#F70">*NEW*</font>
+ * Short & long date formats - dynamically chosen based on column width (WC & logs).  Tool-tip shows long date.<p/>  User may enter both formats separated by a ‘|’ in prefs dialog.
+ * Log message formatters & URL links.  <font color="#F70">*NEW*</font><p/>  Specify patterns to match text in log messages and change its the font & colour & create links.<p/>  May also run a script (`script:`…) or jump to a revision (`svnx:r<REV>`).<p/>  `[`E.g. ‘`\bbug +(#[0-9]+)\b`’ ➝ (Marker Felt, 18pt, red) ➝ <`http://bug-base/$1`>.`]`
+ * Repository log colourisation & filters.  <font color="#F70">*NEW*</font><p/>  Specify arbitrarily complex criteria to colour any log columns and/or filter log entries.<p/>  `[`E.g. ‘My Branches’ ➝ (Any added path begins with ‘/branches/’ and author is ‘chris’) ➝ green.`]`
+ * Preferences are now stored separately from bookmarks.
+ * Preferences are automatically copied from svnX 1.x the first time svnX 2 is launched.
+
+==== Working Copy windows ====
+ * Support for `svn copy` from one WC to another WC via drag & drop.<p/>  Also drop in tree view or on folder items.<p/>  Also supports copying where WCs are from different repos & of unversioned items.
+ * Support for copy/move into a folder via drag & drop in flat-view mode.
+ * Added `svn mkdir` support.  <font color="#F70">*NEW*</font>
+ * Added `svn export` entire WC, a single folder, or multiple items.  <font color="#F70">*NEW*</font>
+ * Added item-list colourisation with customisation.  <font color="#F70">*NEW*</font>
+ * Added item-list status badges & improved sorting.  <font color="#F70">*NEW*</font>
+ * Added item-list file modified-date column with optional colour hints.  <font color="#F70">*NEW*</font>
+ * Added icon titles to first 5 columns.
+ * Improved & expanded item status tool-tips.
+ * Added tool-tips to all column titles.  `[`& fixed OSX bug if columns are re-ordered.`]`
+ * Added ‘Unversioned’ filter & rearranged filter menu.  <font color="#F70">*NEW*</font>
+ * Switch sheet now displays the correct URL for items that are already switched.
+ * Svn switch `--depth`, `--accept`, `--set-depth`, `--force`, `--ignore-externals` options.
+ * New Switch… contextual menu command - applies to targeted item, current directory or entire working copy.
+ * New Merge… contextual menu command - applies to targeted item, current directory or entire working copy.
+ * Merge & Switch sheets now include icons & tool-tips for URLs.
+ * Added `svn update` support for `--set-depth` and for svn 1.7’s `--parents`.
+ * Update command button now works on current folder in tree-view mode when there is no selection.
+ * Update toolbar item now always updates entire working copy.
+ * Modified date column is colourised based on age/last merge/revert/switch/update.
+ * A custom bookmark icon is also displayed in window title bar.
+ * Trying to open 25 or more items asks for confirmation.
+ * The Properties button zooms & fades the Properties palette in & out.
+ * Added support for user to specify `--force` option for `svn lock` & `svn unlock`.
+ * Added help buttons to most command alerts and rename/move/copy/mkdir & commit sheets.
+ * Added support for user to specify `--keep-local` option for `svn remove`.
+ * Drag one or more items to the browser in a repository window to initiate `svn copy`.  <font color="#F70">*NEW*</font>
+ * Copy, move, rename & mkdir allow entry of path separators & indicate if intermediate directories will be created.
+ * Added full Quick Look support.  `[`Requires OSX 10.6+.`]`
+ * WC Create Patch command - selected files, current folder or entire working copy.  <font color="#F70">*NEW*</font>
+ * Apply Patch support: drop `*`.patch file on WC window.  <font color="#F70">*NEW*</font>
+ * Allow hiding & showing of WC item-list columns via menu *Working-Copy ▷ Columns*.  <font color="#F70">*NEW*</font>
+ * `⌃D` ⇨ compare any 2 text files & `⌃⌥D` ⇨ compare files reversed.  <font color="#F70">*NEW*</font>
+ * `⌃1` ⇨ Tree view, `⌃2` ⇨ Flat view & `⌃3` ⇨ Smart view.
+ * Indicate tree conflicts in WC items list & describe them in the tool-tip.
+ * After update, merge, revert or switch - open the WC sidebar if the output indicates there are conflicts.
+ * Added tree view mode support for `⤎` go to parent folder & select previous current folder & `⤏` go into selected folder.
+ * Added support for *Edit, Find ▷ Find…*, *Find Next*, *Find Previous*, *Use Selection for Find* & *Jump to Selection* menu items.
+ * Double-click a folder in the tree view to open it in the Finder.  If you press the OPT-KEY while doing this then svnX will remain in the foreground.
+ * CMD-KEY-click the BTN{Review…} button to make the checked items in the Review & Commit window mirror the selected items in the Working Copy window.
+ * Cleanup support for svn 1.9’s `--remove-unversioned`, `--remove-ignored` & `--include-externals` options.
+
+==== Review & Commit windows ====
+ * `⌘I` copies the selection from diff pane into message field, `⌘V` pastes the clip/pasteboard.
+ * `⌘E` moves the keyboard focus to the message field.
+ * Added *Working-Copy ▷ Reveal in Window* to show the selected item (or repository root item) in the Working Copy window & to activate it.
+ * Command-double-click a number in the diff pane to open the file & show that line.  <font color="#F70">*NEW*</font>
+ * Correctly displays diff for file paths that contain ', ", \\ & $.
+ * Provide improved display of multiple Subversion properties.
+ * Will initially select the second commit item if the first is the WC root.
+ * Refresh maintains the file selection when possible.
+ * Don’t refresh/regenerate R&C diff HTML if unchanged.
+ * Template scripts may act on the current selection in the message field.
+ * Respond to *File ▷ Open*, *Working-Copy ▷ Refresh*, *Diff with BASE* & *Reveal in Finder*.
+
+==== Repository windows ====
+ * All new repository log cache provides incremental loading, download & saving of log entries.  <font color="#F70">*NEW*</font><p/>  Supports enormous logs and allows interaction while loading/building logs.
+ * New repository sub-log generated from cache.  <font color="#F70">*NEW*</font>
+ * New repository URL path control and previous & next control.  <font color="#F70">*NEW*</font><p/>  Drag-and-drop or option-click to copy a URL.
+ * Improved `svn list` caching plus in Copy, Move, MkDir & Delete sheets.
+ * Copy, Move, Delete & Make Dir - Improved dialogs & keyboard navigation, redisplay on error, icons in target paths table, automatic `--parents` support (create intermediate directories for copy, more & mkdir) & live filtering/validation of name input.
+ * Copy & Move commands now support multiple source items where optional new directory field will create intermediate directories.
+ * For Delete command - if browser is focused then initially add selected items to delete list.
+ * Option-click log refresh button to refetch 100 log entries starting from the selected item.
+ * Option-click browser refresh button to first purge all cached `svn list``s for the current revision.
+ * Allow browsing into a path that was later deleted when the current log URL is not the repository root.
+ * Specify svn options for repository export & checkout (depth, ignore-externals & force with native-EOL for export and create root folder & add bookmark for checkout).
+ * Log views: Allow typing `<rev-num>`‘.’ to jump to that revision in the log table.
+ * Drag items from a working copy window to the repository browser to initiate `svn copy`.  <font color="#F70">*NEW*</font>
+
+==== Other ====
+ * New *Edit ▷ Deselect All* & *Select Unselected* menu commands work in both working copy file lists & repository browser views.
+ * Merged Activity window’s command info drawer into the log drawer.
+ * All text & messages are now localisable via the Localizable.strings file.
+ * CLI: Added `svnx blame|-b `[`-v`]` <path...>` support.
+ * CLI: Added `svnx +<line> <text-file>` - opens a file & shows the specified line.  <font color="#F70">*NEW*</font>
+ * Improved UI for report page switching.
+ * Repository reports now use formatted dates & always use the cached log.
+ * Repository reports have improved look & printing.
+ * Incremental, asynchronous, building of Properties pallet/views.
+ * Double click new ‘Get Subversion 1.6.17.command’ icon to get & install Subversion.
+ * User is asked to authorise write access to /opt/subversion/libs if necessary.
+ * Check /opt/local/bin/svn when looking for svn tool.
+ * Supports Subversion 1.7.2-1.7.11.
+ * Added *File ▷ Open* and made it work for working copy items; repository items & repository log paths.<p/>  Also added support to Log (Diff) sheets, on Working Copy & Repository windows, for opening log entries & log paths at any available revision.
+ * Added *File ▷ Blame* & *Blame Verbose* and made them work for working copy items; repository items & repository log paths.<p/>  Also added support to Log (Diff) sheet, on Working Copy & Repository windows, for blaming log entries & log paths at any available revision.
+<br/>
+
+
+----
 <wiki:comment>..............................  1.3.4  ..............................</wiki:comment>
 = 1.3.4 — <font color="#0B0">RELEASE</font>    <font size="3">2012–09–04    [http://code.google.com/p/svnx/wiki/Features_1_3 View Detailed Features and Changes]</font> =
 
